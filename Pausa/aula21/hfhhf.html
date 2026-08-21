@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Pauta da 12ª classe</title>
+</head>
+<body>
+
+<h1>Pauta da 12ª classe</h1>
+
+<table border="1">
+  <tr>
+    <th>Nome</th>
+    <th>1º Trimestre</th>
+    <th>2º Trimestre</th>
+    <th>3º Trimestre</th>
+    <th>Média Final</th>
+    <th>Estado</th>
+  </tr>
+  <tbody id="tabelaAlunos"></tbody>
+</table>
+
+<button onclick="calcularTudo()">Calcular Todos</button>
+<div id="resultado"></div>
+
+<script>
+// 1. Gera as 10 linhas automaticamente quando abre a página
+function criarLinhas(){
+  let tabela = document.getElementById('tabelaAlunos');
+  for(let i = 1; i <= 10; i++){
+    tabela.innerHTML += `
+      <tr>
+        <td><input type="text" id="nome${i}" placeholder="Aluno ${i}"></td>
+        <td><input type="number" id="t1_${i}" min="0" max="20" placeholder="0-20"></td>
+        <td><input type="number" id="t2_${i}" min="0" max="20" placeholder="0-20"></td>
+        <td><input type="number" id="t3_${i}" min="0" max="20" placeholder="0-20"></td>
+        <td id="mf${i}">-</td>
+        <td id="cf${i}">-</td>
+      </tr>
+    `;
+  }
+}
+criarLinhas();
+
+
+function calcularTudo(){
+  let aprovados = 0;
+  let reprovados = 0;
+
+  for(let i = 1; i <= 10; i++){
+    let nome = document.getElementById('nome'+i).value;
+    let t1 = parseFloat(document.getElementById('t1_'+i).value) || 0;
+    let t2 = parseFloat(document.getElementById('t2_'+i).value) || 0;
+    let t3 = parseFloat(document.getElementById('t3_'+i).value) || 0;
+    
+   
+    let mf = (t1 + t2 + t3) / 3;
+    mf = mf.toFixed(2);
+    
+    // Define se aprovou ou reprovou. Se for 14, troca aqui
+    let estado = mf >= 10 ? "Aprovado" : "Reprovado";
+    
+    if(estado === "Aprovado") aprovados++; else reprovados++;
+    
+    // Mostra na tabela
+    document.getElementById('mf'+i).innerText = mf;
+    document.getElementById('cf'+i).innerText = estado;
+  }
+
+  
+}
+</script>
+
+</body>
+</html>

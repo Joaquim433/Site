@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pauta da turma</title>
+  <style>
+    h1 {text-align: center;}
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    table { border-collapse: separate; width: 50%; }
+    th, td { border: 1px solid #999; padding: 8px; text-align: center; }
+    th { background-color: darkblue; color: darkkhaki; }
+    input[type="text"], input[type="number"] { width: 90px; padding: 4px; }
+    input[type="text"] { width: 150px; }
+
+    #bt { margin-top: 15px; padding: 8px 16px; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+  <h1>Pauta da 12 classe</h1>
+
+  <table id="tabela">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>1º Trimestre</th>
+        <th>2º Trimestre</th>
+        <th>3º Trimestre</th>
+        <th>Média Final</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+    <tbody id="corpo-tabela">
+      
+    </tbody>
+  </table>
+
+  <input type="button" value="Salvar" id="bt" onclick="salvarTudo()">
+
+  <script>
+    const numAlunos = 15;
+    const corpo = document.getElementById('corpo-tabela');
+
+    // Gera as 15 linhas da tabela
+    for (let i = 1; i <= numAlunos; i++) {
+      const linha = document.createElement('tr');
+      linha.innerHTML = `
+        <td><input type="text" id="nome${i}" placeholder=""></td>
+        <td><input type="number" id="t1_${i}"></td>
+        <td><input type="number" id="t2_${i}"></td>
+        <td><input type="number" id="t3_${i}"></td>
+        <td id="mf_${i}"></td>
+        <td id="cf_${i}"></td>
+      `;
+      corpo.appendChild(linha);
+    }
+
+    function salvar(i) {
+      var t1 = window.document.getElementById('t1_' + i);
+      var t2 = window.document.getElementById('t2_' + i);
+      var t3 = window.document.getElementById('t3_' + i);
+      var mf = window.document.getElementById('mf_' + i);
+      var cf = window.document.getElementById('cf_' + i);
+
+      t1 = Number(t1.value);
+      t2 = Number(t2.value);
+      t3 = Number(t3.value);
+
+      var s = (t1 + t2 + t3) / 3;
+      mf.innerHTML = isNaN(s) ? '' : s.toFixed(1);
+
+      if (s >= 9.5) {
+        cf.innerHTML = 'APROVADO';
+        cf.className = 'aprovado';
+      } else {
+        cf.innerHTML = 'REPROVADO';
+        cf.className = 'reprovado';
+      }
+    }
+
+    function salvarTudo() {
+      for (let i = 1; i <= numAlunos; i++) {
+        salvar(i);
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jogadores | HoopZone</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <a href="index.html" class="logo">
+            <span>H</span> HOOPZONE
+        </a>
+
+        <nav class="navbar">
+            <a href="index.html">Início</a>
+            <a href="players.html" class="active">Jogadores</a>
+            <a href="index.html#teams">Equipas</a>
+            <a href="index.html#news">Notícias</a>
+        </nav>
+
+        <a href="login.html" class="login-button">
+            Entrar
+        </a>
+
+        <button class="menu-button" onclick="toggleMenu()">
+            ☰
+        </button>
+
+    </header>
+
+
+    <!-- ================= MENU MOBILE ================= -->
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="index.html">Início</a>
+        <a href="players.html">Jogadores</a>
+        <a href="index.html#teams">Equipas</a>
+        <a href="index.html#news">Notícias</a>
+        <a href="login.html">Entrar</a>
+
+    </div>
+
+
+    <!-- ================= LISTA DE JOGADORES ================= -->
+
+    <section class="section" style="padding-top:3.5rem;">
+
+        <div class="section-header">
+
+            <div>
+
+                <p class="small-title">
+                    ALL PLAYERS
+                </p>
+
+                <h2>
+                    Todos os jogadores
+                </h2>
+
+            </div>
+
+        </div>
+
+        <div class="players-grid" id="playersListGrid">
+            <!-- preenchido via script.js -->
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="logo">
+            <span>H</span> HOOPZONE
+        </div>
+
+        <p>
+            Basquete, estatísticas e histórias
+            num só lugar.
+        </p>
+
+        <small>
+            © 2026 HoopZone
+        </small>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

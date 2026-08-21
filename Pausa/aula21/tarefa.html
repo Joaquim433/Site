@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pauta Escolar</title>
+
+    <style>
+        
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>PAUTA ESCOLAR</h1>
+
+    <div class="dados">
+
+        <input
+            type="text"
+            id="nome"
+            placeholder="Nome completo do aluno"
+        >
+
+        <input
+            type="text"
+            id="numero"
+            placeholder="Nº do aluno"
+        >
+
+        <select id="disciplina">
+            <option value="">Selecionar disciplina</option>
+            <option>Matemática</option>
+            <option>Língua Portuguesa</option>
+            <option>Inglês</option>
+            <option>Informática</option>
+            <option>Física</option>
+            <option>Química</option>
+            <option>Biologia</option>
+        </select>
+
+        <button onclick="adicionarAluno()">
+            Adicionar aluno
+        </button>
+
+    </div>
+
+
+    <table>
+
+        <thead>
+
+            <tr>
+                <th>Nº</th>
+                <th>Nome do aluno</th>
+                <th>Disciplina</th>
+                <th>1º Trimestre</th>
+                <th>2º Trimestre</th>
+                <th>3º Trimestre</th>
+                <th>Média Final</th>
+                <th>Estado</th>
+                <th>Ação</th>
+            </tr>
+
+        </thead>
+
+        <tbody id="tabela">
+        </tbody>
+
+    </table>
+
+    
+
+</div>
+
+
+<script>
+
+    let alunos = [];
+
+    function adicionarAluno() {
+
+        let nome = document.getElementById("nome").value;
+        let numero = document.getElementById("numero").value;
+        let disciplina = document.getElementById("disciplina").value;
+
+        if (nome === "" || numero === "" || disciplina === "") {
+
+            alert("Preencha todos os campos!");
+
+            return;
+        }
+
+        let nota1 = Number(
+            prompt("Digite a nota do 1º trimestre:")
+        );
+
+        let nota2 = Number(
+            prompt("Digite a nota do 2º trimestre:")
+        );
+
+        let nota3 = Number(
+            prompt("Digite a nota do 3º trimestre:")
+        );
+
+
+        if (
+            nota1 < 0 || nota1 > 20 ||
+            nota2 < 0 || nota2 > 20 ||
+            nota3 < 0 || nota3 > 20
+        ) {
+
+            alert("As notas devem estar entre 0 e 20!");
+
+            return;
+        }
+
+
+        let media =
+            (nota1 + nota2 + nota3) / 3;
+
+
+        let estado;
+        let classe;
+
+
+        if (media >= 10) {
+
+            estado = "Aprovado";
+            classe = "aprovado";
+
+        } else if (media >= 7) {
+
+            estado = "Recurso";
+            classe = "recurso";
+
+        } else {
+
+            estado = "Reprovado";
+            classe = "reprovado";
+
+        }
+
+
+        let aluno = {
+
+            numero: numero,
+            nome: nome,
+            disciplina: disciplina,
+            nota1: nota1,
+            nota2: nota2,
+            nota3: nota3,
+            media: media.toFixed(2),
+            estado: estado,
+            classe: classe
+
+        };
+
+
+        alunos.push(aluno);
+
+        mostrarPauta();
+
+
+        document.getElementById("nome").value = "";
+        document.getElementById("numero").value = "";
+        document.getElementById("disciplina").value = "";
+
+    }
+
+
+    function mostrarPauta() {
+
+        let tabela = document.getElementById("tabela");
+
+        tabela.innerHTML = "";
+
+
+        alunos.forEach(function(aluno, index) {
+
+            let linha = tabela.insertRow();
+
+
+            linha.innerHTML = `
+
+                <td>${aluno.numero}</td>
+
+                <td>${aluno.nome}</td>
+
+                <td>${aluno.disciplina}</td>
+
+                <td>${aluno.nota1}</td>
+
+                <td>${aluno.nota2}</td>
+
+                <td>${aluno.nota3}</td>
+
+                <td><strong>${aluno.media}</strong></td>
+
+                <td class="${aluno.classe}">
+                    ${aluno.estado}
+                </td>
+
+                <td>
+                    <button
+                        class="remover"
+                        onclick="removerAluno(${index})">
+                        Eliminar
+                    </button>
+                </td>
+
+            `;
+
+        });
+
+    }
+
+
+    function removerAluno(index) {
+
+        if (confirm("Deseja eliminar este aluno?")) {
+
+            alunos.splice(index, 1);
+
+            mostrarPauta();
+
+        }
+
+    }
+
+
+    function imprimirPauta() {
+
+        window.print();
+
+    }
+
+</script>
+
+</body>
+</html>

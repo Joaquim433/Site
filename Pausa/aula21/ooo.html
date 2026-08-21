@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="PT.BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAUTA ESCOLAR</title>
+
+</head>
+<body>
+    <h1>Pauta da 12ªclasse</h1>
+<table border="1" >
+     <tr>
+    <th>nome</th>
+    <th>1º trimestre</th>
+    <th>2º trimestre </th>
+    <th>3º trimestre</th>
+    <th>media final</th>
+    <th>estado</th>
+    </tr>
+
+    <tbody id="tabelaAlunos" ></tbody>
+</table>
+<button onclick="calcularTudo" > calcular</button>
+<div id="resultado"></div>
+<script>
+  function criarlinhas(){
+    let tabela = document.getElementById('tabelaAlunos');
+  for(let i = 1; i <= 10; i++){
+    tabela.innerHTML += ` <tr>
+        <td><input type="text" id="nome${i}" placeholder="Aluno ${i}"></td>
+        <td><input type="number" id="t1_${i}" min="0" max="20" placeholder="0-20"></td>
+        <td><input type="number" id="t2_${i}" min="0" max="20" placeholder="0-20"></td>
+        <td><input type="number" id="t3_${i}" min="0" max="20" placeholder="0-20"></td>
+        <td id="mf${i}">-</td>
+        <td id="cf${i}">-</td>
+      </tr>
+    `;
+  }
+//  uma maquina de ler pensamento. roteamento de caminho
+  }
+criarlinhas()
+  
+</script>
+
+    
+</body>
+</html>

@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Jogadores | HoopZone</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header class="header">
+
+    <a href="index.html" class="logo">
+        <span>H</span>
+        HOOPZONE
+    </a>
+
+
+    <nav class="navbar">
+
+        <a href="index.html">
+            Início
+        </a>
+
+        <a
+            href="players.html"
+            class="active"
+        >
+            Jogadores
+        </a>
+
+        <a href="index.html#teams">
+            Equipas
+        </a>
+
+        <a href="index.html#news">
+            Notícias
+        </a>
+
+    </nav>
+
+
+    <a
+        href="login.html"
+        class="login-button"
+    >
+        Entrar
+    </a>
+
+
+    <button
+        class="menu-button"
+        onclick="toggleMenu()"
+    >
+        ☰
+    </button>
+
+</header>
+
+
+
+<!-- =========================================
+     MOBILE MENU
+========================================= -->
+
+<div
+    class="mobile-menu"
+    id="mobileMenu"
+>
+
+    <a href="index.html">
+        Início
+    </a>
+
+    <a href="players.html">
+        Jogadores
+    </a>
+
+    <a href="index.html#teams">
+        Equipas
+    </a>
+
+    <a href="index.html#news">
+        Notícias
+    </a>
+
+    <a href="login.html">
+        Entrar
+    </a>
+
+</div>
+
+
+
+<!-- =========================================
+     MAIN
+========================================= -->
+
+<main class="players-page">
+
+
+    <!-- =====================================
+         TITLE
+    ====================================== -->
+
+    <section class="players-header">
+
+        <p class="small-title">
+            THE ROSTER
+        </p>
+
+        <h1>
+            Jogadores
+        </h1>
+
+        <p>
+            Descobre as maiores estrelas do
+            basquete mundial.
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================
+         SEARCH
+    ====================================== -->
+
+    <section class="search-area">
+
+        <input
+            type="text"
+            id="playerSearch"
+            placeholder="🔎 Procurar jogador..."
+            oninput="searchPlayers()"
+        >
+
+    </section>
+
+
+
+    <!-- =====================================
+         PLAYERS
+    ====================================== -->
+
+    <section class="players-grid">
+
+
+        <!-- ===============================
+             LEBRON
+        ================================ -->
+
+        <a
+            href="player.html?player=lebron"
+            class="player-card"
+        >
+
+            <div class="player-image">
+
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/LeBron%20James%20(51912432538).jpg"
+                    alt="LeBron James"
+                >
+
+                <span>
+                    #23
+                </span>
+
+            </div>
+
+
+            <div class="player-card-content">
+
+                <small>
+                    LOS ANGELES LAKERS
+                </small>
+
+                <h3>
+                    LeBron James
+                </h3>
+
+                <p>
+                    Forward • USA
+                </p>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- ===============================
+             CURRY
+        ================================ -->
+
+        <a
+            href="player.html?player=curry"
+            class="player-card"
+        >
+
+            <div class="player-image">
+
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Stephen%20Curry%202019.jpg"
+                    alt="Stephen Curry"
+                >
+
+                <span>
+                    #30
+                </span>
+
+            </div>
+
+
+            <div class="player-card-content">
+
+                <small>
+                    GOLDEN STATE WARRIORS
+                </small>
+
+                <h3>
+                    Stephen Curry
+                </h3>
+
+                <p>
+                    Guard • USA
+                </p>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- ===============================
+             LUKA
+        ================================ -->
+
+        <a
+            href="player.html?player=luka"
+            class="player-card"
+        >
+
+            <div class="player-image">
+
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Luka%20Doncic%202019.jpg"
+                    alt="Luka Dončić"
+                >
+
+                <span>
+                    #77
+                </span>
+
+            </div>
+
+
+            <div class="player-card-content">
+
+                <small>
+                    LOS ANGELES LAKERS
+                </small>
+
+                <h3>
+                    Luka Dončić
+                </h3>
+
+                <p>
+                    Guard-Forward • Slovenia
+                </p>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- ===============================
+             GIANNIS
+        ================================ -->
+
+        <a
+            href="#"
+            class="player-card"
+        >
+
+            <div class="player-image">
+
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Giannis%20Antetokounmpo%202021.jpg"
+                    alt="Giannis Antetokounmpo"
+                >
+
+                <span>
+                    #34
+                </span>
+
+            </div>
+
+
+            <div class="player-card-content">
+
+                <small>
+                    MILWAUKEE BUCKS
+                </small>
+
+                <h3>
+                    Giannis Antetokounmpo
+                </h3>
+
+                <p>
+                    Forward • Greece
+                </p>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- ===============================
+             JOKIC
+        ================================ -->
+
+        <a
+            href="#"
+            class="player-card"
+        >
+
+            <div class="player-image">
+
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Nikola%20Jokic%202023.jpg"
+                    alt="Nikola Jokić"
+                >
+
+                <span>
+                    #15
+                </span>
+
+            </div>
+
+
+            <div class="player-card-content">
+
+                <small>
+                    DENVER NUGGETS
+                </small>
+
+                <h3>
+                    Nikola Jokić
+                </h3>
+
+                <p>
+                    Center • Serbia
+                </p>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- ===============================
+             ANTHONY EDWARDS
+        ================================ -->
+
+        <a
+            href="#"
+            class="player-card"
+        >
+
+            <div class="player-image">
+
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Anthony%20Edwards%202022.jpg"
+                    alt="Anthony Edwards"
+                >
+
+                <span>
+                    #5
+                </span>
+
+            </div>
+
+
+            <div class="player-card-content">
+
+                <small>
+                    MINNESOTA TIMBERWOLVES
+                </small>
+
+                <h3>
+                    Anthony Edwards
+                </h3>
+
+                <p>
+                    Guard • USA
+                </p>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- ===============================
+             JAYSON TATUM
+        ================================ -->
+
+        <a
+            href="#"
+            class="player-card"
+        >
+
+            <div class="player-image">
+
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Jayson%20Tatum%202022.jpg"
+                    alt="Jayson Tatum"
+                >
+
+                <span>
+                    #0
+                </span>
+
+            </div>
+
+
+            <div class="player-card-content">
+
+                <small>
+                    BOSTON CELTICS
+                </small>
+
+                <h3>
+                    Jayson Tatum
+                </h3>
+
+                <p>
+                    Forward • USA
+                </p>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- ===============================
+             KEVIN DURANT
+        ================================ -->
+
+        <a
+            href="#"
+            class="player-card"
+        >
+
+            <div class="player-image">
+
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Kevin%20Durant%202019.jpg"
+                    alt="Kevin Durant"
+                >
+
+                <span>
+                    #35
+                </span>
+
+            </div>
+
+
+            <div class="player-card-content">
+
+                <small>
+                    HOUSTON ROCKETS
+                </small>
+
+                <h3>
+                    Kevin Durant
+                </h3>
+
+                <p>
+                    Forward • USA
+                </p>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- ===============================
+             SHAI
+        ================================ -->
+
+        <a
+            href="#"
+            class="player-card"
+        >
+
+            <div class="player-image">
+
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Shai%20Gilgeous-Alexander%202024.jpg"
+                    alt="Shai Gilgeous-Alexander"
+                >
+
+                <span>
+                    #2
+                </span>
+
+            </div>
+
+
+            <div class="player-card-content">
+
+                <small>
+                    OKLAHOMA CITY THUNDER
+                </small>
+
+                <h3>
+                    Shai Gilgeous-Alexander
+                </h3>
+
+                <p>
+                    Guard • Canada
+                </p>
+
+            </div>
+
+        </a>
+
+
+    </section>
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+    <div class="logo">
+
+        <span>H</span>
+
+        HOOPZONE
+
+    </div>
+
+
+    <p>
+        Basquete, estatísticas e histórias
+        num só lugar.
+    </p>
+
+
+    <small>
+        © 2026 HoopZone
+    </small>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

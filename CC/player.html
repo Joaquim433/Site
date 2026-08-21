@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Perfil do Jogador | HoopZone</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header class="header">
+
+    <a href="index.html" class="logo">
+
+        <span>H</span>
+
+        HOOPZONE
+
+    </a>
+
+
+    <nav class="navbar">
+
+        <a href="index.html">
+            Início
+        </a>
+
+        <a
+            href="players.html"
+            class="active"
+        >
+            Jogadores
+        </a>
+
+        <a href="index.html#teams">
+            Equipas
+        </a>
+
+        <a href="index.html#news">
+            Notícias
+        </a>
+
+    </nav>
+
+
+    <a
+        href="login.html"
+        class="login-button"
+    >
+        Entrar
+    </a>
+
+
+    <button
+        class="menu-button"
+        onclick="toggleMenu()"
+    >
+        ☰
+    </button>
+
+</header>
+
+
+
+<!-- =========================================
+     MOBILE MENU
+========================================= -->
+
+<div
+    class="mobile-menu"
+    id="mobileMenu"
+>
+
+    <a href="index.html">
+        Início
+    </a>
+
+    <a href="players.html">
+        Jogadores
+    </a>
+
+    <a href="index.html#teams">
+        Equipas
+    </a>
+
+    <a href="index.html#news">
+        Notícias
+    </a>
+
+    <a href="login.html">
+        Entrar
+    </a>
+
+</div>
+
+
+
+<!-- =========================================
+     PLAYER PROFILE
+========================================= -->
+
+<main class="player-profile">
+
+
+    <!-- =====================================
+         PLAYER HERO
+    ====================================== -->
+
+    <section class="profile-hero">
+
+
+        <!-- FOTO -->
+
+        <div class="profile-image">
+
+            <img
+                id="playerImage"
+                src=""
+                alt="Jogador"
+            >
+
+        </div>
+
+
+
+        <!-- INFORMAÇÕES -->
+
+        <div class="profile-information">
+
+
+            <span
+                class="profile-number"
+                id="playerNumber"
+            >
+                #23
+            </span>
+
+
+            <h1 id="playerName">
+                LeBron James
+            </h1>
+
+
+            <p
+                class="profile-team"
+                id="playerTeam"
+            >
+                Los Angeles Lakers
+            </p>
+
+
+            <div class="player-details">
+
+
+                <div>
+
+                    <span>
+                        POSIÇÃO
+                    </span>
+
+                    <strong id="playerPosition">
+                        Forward
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        PAÍS
+                    </span>
+
+                    <strong id="playerCountry">
+                        USA
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- FAVORITO -->
+
+            <button
+                class="favorite-button"
+                id="favoriteButton"
+                onclick="toggleFavorite()"
+            >
+
+                ☆ Adicionar aos favoritos
+
+            </button>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         ESTATÍSTICAS
+    ====================================== -->
+
+    <section class="profile-section">
+
+
+        <div class="profile-title">
+
+            <p class="small-title">
+                SEASON STATS
+            </p>
+
+            <h2>
+                Estatísticas
+            </h2>
+
+        </div>
+
+
+        <div class="player-stats">
+
+
+            <div class="stat-card">
+
+                <span>
+                    PPG
+                </span>
+
+                <strong id="playerPPG">
+                    22.6
+                </strong>
+
+                <small>
+                    Pontos por jogo
+                </small>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>
+                    RPG
+                </span>
+
+                <strong id="playerRPG">
+                    6.8
+                </strong>
+
+                <small>
+                    Ressaltos por jogo
+                </small>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>
+                    APG
+                </span>
+
+                <strong id="playerAPG">
+                    7.3
+                </strong>
+
+                <small>
+                    Assistências por jogo
+                </small>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>
+                    Nº
+                </span>
+
+                <strong id="playerJersey">
+                    23
+                </strong>
+
+                <small>
+                    Número
+                </small>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         SOBRE O JOGADOR
+    ====================================== -->
+
+    <section class="profile-section about-player">
+
+        <p class="small-title">
+            PLAYER PROFILE
+        </p>
+
+        <h2>
+            Sobre o jogador
+        </h2>
+
+
+        <p id="playerDescription">
+
+            LeBron James é uma das maiores estrelas
+            da história do basquete. O jogador é
+            conhecido pela sua capacidade de marcar,
+            criar jogadas e liderar a sua equipa.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================
+         VOLTAR
+    ====================================== -->
+
+    <div class="back-button-container">
+
+        <a
+            href="players.html"
+            class="main-button"
+        >
+
+            ← Voltar aos jogadores
+
+        </a>
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+    <div class="logo">
+
+        <span>H</span>
+
+        HOOPZONE
+
+    </div>
+
+
+    <p>
+        Basquete, estatísticas e histórias
+        num só lugar.
+    </p>
+
+
+    <small>
+        © 2026 HoopZone
+    </small>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+<script>
+
+/* =========================================
+   DATABASE DOS JOGADORES
+========================================= */
+
+const players = {
+
+    lebron: {
+
+        name: "LeBron James",
+
+        team: "Los Angeles Lakers",
+
+        number: "23",
+
+        position: "Forward",
+
+        country: "USA",
+
+        ppg: "22.6",
+
+        rpg: "6.8",
+
+        apg: "7.3",
+
+        image:
+        "https://commons.wikimedia.org/wiki/Special:Redirect/file/LeBron%20James%20(51912432538).jpg",
+
+        description:
+        "LeBron James é uma das maiores estrelas da história do basquete. Conhecido pela sua capacidade de pontuar, criar jogadas e liderar a equipa."
+    },
+
+
+    curry: {
+
+        name: "Stephen Curry",
+
+        team: "Golden State Warriors",
+
+        number: "30",
+
+        position: "Guard",
+
+        country: "USA",
+
+        ppg: "26.6",
+
+        rpg: "3.6",
+
+        apg: "4.7",
+
+        image:
+        "https://commons.wikimedia.org/wiki/Special:Redirect/file/Stephen%20Curry%202019.jpg",
+
+        description:
+        "Stephen Curry é considerado uma das maiores referências da história dos lançamentos de três pontos e um dos jogadores mais influentes da NBA."
+    },
+
+
+    luka: {
+
+        name: "Luka Dončić",
+
+        team: "Los Angeles Lakers",
+
+        number: "77",
+
+        position: "Guard-Forward",
+
+        country: "Slovenia",
+
+        ppg: "33.5",
+
+        rpg: "7.7",
+
+        apg: "8.3",
+
+        image:
+        "https://commons.wikimedia.org/wiki/Special:Redirect/file/Luka%20Doncic%202019.jpg",
+
+        description:
+        "Luka Dončić é conhecido pela sua capacidade de controlar o ritmo do jogo, criar oportunidades e produzir grandes números ofensivos."
+    }
+
+};
+
+
+/* =========================================
+   DESCOBRIR JOGADOR
+========================================= */
+
+const params =
+    new URLSearchParams(
+        window.location.search
+    );
+
+
+const player =
+    params.get("player") || "lebron";
+
+
+const data =
+    players[player] || players.lebron;
+
+
+
+/* =========================================
+   PREENCHER PÁGINA
+========================================= */
+
+document.getElementById(
+    "playerName"
+).textContent = data.name;
+
+
+document.getElementById(
+    "playerNumber"
+).textContent =
+    "#" + data.number;
+
+
+document.getElementById(
+    "playerTeam"
+).textContent =
+    data.team;
+
+
+document.getElementById(
+    "playerPosition"
+).textContent =
+    data.position;
+
+
+document.getElementById(
+    "playerCountry"
+).textContent =
+    data.country;
+
+
+document.getElementById(
+    "playerPPG"
+).textContent =
+    data.ppg;
+
+
+document.getElementById(
+    "playerRPG"
+).textContent =
+    data.rpg;
+
+
+document.getElementById(
+    "playerAPG"
+).textContent =
+    data.apg;
+
+
+document.getElementById(
+    "playerJersey"
+).textContent =
+    data.number;
+
+
+document.getElementById(
+    "playerDescription"
+).textContent =
+    data.description;
+
+
+document.getElementById(
+    "playerImage"
+).src =
+    data.image;
+
+
+document.getElementById(
+    "playerImage"
+).alt =
+    data.name;
+
+
+
+/* =========================================
+   FAVORITOS
+========================================= */
+
+function toggleFavorite() {
+
+    let favorites =
+        JSON.parse(
+            localStorage.getItem(
+                "hoopzoneFavorites"
+            )
+        ) || [];
+
+
+    const button =
+        document.getElementById(
+            "favoriteButton"
+        );
+
+
+    if (favorites.includes(data.name)) {
+
+        favorites =
+            favorites.filter(
+                name =>
+                name !== data.name
+            );
+
+        button.textContent =
+            "☆ Adicionar aos favoritos";
+
+    } else {
+
+        favorites.push(
+            data.name
+        );
+
+        button.textContent =
+            "★ Remover dos favoritos";
+
+    }
+
+
+    localStorage.setItem(
+        "hoopzoneFavorites",
+        JSON.stringify(favorites)
+    );
+
+}
+
+
+/* =========================================
+   VERIFICAR FAVORITO
+========================================= */
+
+function checkFavorite() {
+
+    const favorites =
+        JSON.parse(
+            localStorage.getItem(
+                "hoopzoneFavorites"
+            )
+        ) || [];
+
+
+    if (
+        favorites.includes(
+            data.name
+        )
+    ) {
+
+        document.getElementById(
+            "favoriteButton"
+        ).textContent =
+            "★ Remover dos favoritos";
+
+    }
+
+}
+
+
+checkFavorite();
+
+</script>
+
+</body>
+</html>

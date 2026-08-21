@@ -1,0 +1,1 @@
+    document.getElementById(texto).innerHTML=" MEU PRIMEIRO TEXTO <b>js<b>"

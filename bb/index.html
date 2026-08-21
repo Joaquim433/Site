@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HoopZone | Basketball</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <a href="index.html" class="logo">
+            <span>H</span> HOOPZONE
+        </a>
+
+        <nav class="navbar">
+            <a href="index.html" class="active">Início</a>
+            <a href="players.html">Jogadores</a>
+            <a href="#teams">Equipas</a>
+            <a href="#news">Notícias</a>
+        </nav>
+
+        <a href="login.html" class="login-button">
+            Entrar
+        </a>
+
+        <button class="menu-button" onclick="toggleMenu()">
+            ☰
+        </button>
+
+    </header>
+
+
+    <!-- ================= MENU MOBILE ================= -->
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="index.html">Início</a>
+        <a href="players.html">Jogadores</a>
+        <a href="#teams">Equipas</a>
+        <a href="#news">Notícias</a>
+        <a href="login.html">Entrar</a>
+
+    </div>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                THE HOME OF BASKETBALL
+            </p>
+
+            <h1>
+                O jogo.<br>
+                <span>A emoção.</span><br>
+                As estrelas.
+            </h1>
+
+            <p class="hero-description">
+                Acompanha os maiores jogadores do mundo,
+                estatísticas, equipas, resultados e as principais
+                histórias do basquete.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="players.html" class="main-button">
+                    Explorar jogadores →
+                </a>
+
+                <a href="register.html" class="secondary-button">
+                    Criar conta
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= SLIDER ================= -->
+
+        <div class="slider">
+
+            <!-- LE BRON -->
+
+            <div class="slide active">
+
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/LeBron%20James%20(51912432538).jpg"
+                    alt="LeBron James"
+                >
+
+                <div class="slide-overlay"></div>
+
+                <div class="player-info">
+
+                    <small>
+                        LOS ANGELES LAKERS
+                    </small>
+
+                    <h2>
+                        LeBron James
+                    </h2>
+
+                    <p>
+                        F • #23
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- STEPHEN CURRY -->
+
+            <div class="slide">
+
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Stephen%20Curry%202019.jpg"
+                    alt="Stephen Curry"
+                >
+
+                <div class="slide-overlay"></div>
+
+                <div class="player-info">
+
+                    <small>
+                        GOLDEN STATE WARRIORS
+                    </small>
+
+                    <h2>
+                        Stephen Curry
+                    </h2>
+
+                    <p>
+                        G • #30
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- LUKA -->
+
+            <div class="slide">
+
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Luka%20Doncic%202019.jpg"
+                    alt="Luka Dončić"
+                >
+
+                <div class="slide-overlay"></div>
+
+                <div class="player-info">
+
+                    <small>
+                        LOS ANGELES LAKERS
+                    </small>
+
+                    <h2>
+                        Luka Dončić
+                    </h2>
+
+                    <p>
+                        G-F • #77
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- INDICADORES -->
+
+            <div class="slider-dots">
+
+                <button
+                    class="dot active"
+                    onclick="goSlide(0)">
+                </button>
+
+                <button
+                    class="dot"
+                    onclick="goSlide(1)">
+                </button>
+
+                <button
+                    class="dot"
+                    onclick="goSlide(2)">
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= JOGADORES ================= -->
+
+    <section class="section">
+
+        <div class="section-header">
+
+            <div>
+
+                <p class="small-title">
+                    PLAYER SPOTLIGHT
+                </p>
+
+                <h2>
+                    Estrelas em destaque
+                </h2>
+
+            </div>
+
+            <a href="players.html">
+                Ver todos →
+            </a>
+
+        </div>
+
+
+        <div class="players-grid">
+
+
+            <!-- LEBRON -->
+
+            <a href="player.html?player=lebron"
+               class="player-card">
+
+                <div class="player-image">
+
+                    <img
+                        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/LeBron%20James%20(51912432538).jpg"
+                        alt="LeBron James"
+                    >
+
+                    <span>
+                        #23
+                    </span>
+
+                </div>
+
+                <div class="player-card-content">
+
+                    <small>
+                        LAL • FORWARD
+                    </small>
+
+                    <h3>
+                        LeBron James
+                    </h3>
+
+                    <p>
+                        22.6 PPG • 6.8 RPG • 7.3 APG
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <!-- CURRY -->
+
+            <a href="player.html?player=curry"
+               class="player-card">
+
+                <div class="player-image">
+
+                    <img
+                        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Stephen%20Curry%202019.jpg"
+                        alt="Stephen Curry"
+                    >
+
+                    <span>
+                        #30
+                    </span>
+
+                </div>
+
+                <div class="player-card-content">
+
+                    <small>
+                        GSW • GUARD
+                    </small>
+
+                    <h3>
+                        Stephen Curry
+                    </h3>
+
+                    <p>
+                        26.6 PPG • 3.6 RPG • 4.7 APG
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <!-- LUKA -->
+
+            <a href="player.html?player=luka"
+               class="player-card">
+
+                <div class="player-image">
+
+                    <img
+                        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Luka%20Doncic%202019.jpg"
+                        alt="Luka Dončić"
+                    >
+
+                    <span>
+                        #77
+                    </span>
+
+                </div>
+
+                <div class="player-card-content">
+
+                    <small>
+                        LAL • GUARD-FORWARD
+                    </small>
+
+                    <h3>
+                        Luka Dončić
+                    </h3>
+
+                    <p>
+                        33.5 PPG • 7.7 RPG • 8.3 APG
+                    </p>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= EQUIPAS ================= -->
+
+    <section class="section" id="teams">
+
+        <div class="section-header">
+
+            <div>
+
+                <p class="small-title">
+                    LEAGUE
+                </p>
+
+                <h2>
+                    Equipas em destaque
+                </h2>
+
+            </div>
+
+        </div>
+
+        <div class="teams-grid">
+
+            <div class="team-card" style="--team-color:#552583;">
+                <span class="team-badge">LAL</span>
+                <h3>Los Angeles Lakers</h3>
+                <p>Conferência Oeste • Los Angeles</p>
+            </div>
+
+            <div class="team-card" style="--team-color:#1D428A;">
+                <span class="team-badge">GSW</span>
+                <h3>Golden State Warriors</h3>
+                <p>Conferência Oeste • San Francisco</p>
+            </div>
+
+            <div class="team-card" style="--team-color:#007A33;">
+                <span class="team-badge">BOS</span>
+                <h3>Boston Celtics</h3>
+                <p>Conferência Este • Boston</p>
+            </div>
+
+            <div class="team-card" style="--team-color:#0E2240;">
+                <span class="team-badge">DEN</span>
+                <h3>Denver Nuggets</h3>
+                <p>Conferência Oeste • Denver</p>
+            </div>
+
+            <div class="team-card" style="--team-color:#00471B;">
+                <span class="team-badge">MIL</span>
+                <h3>Milwaukee Bucks</h3>
+                <p>Conferência Este • Milwaukee</p>
+            </div>
+
+            <div class="team-card" style="--team-color:#E56020;">
+                <span class="team-badge">DAL</span>
+                <h3>Dallas Mavericks</h3>
+                <p>Conferência Oeste • Dallas</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ESTATÍSTICAS ================= -->
+
+    <section class="stats">
+
+        <div>
+            <strong>589</strong>
+            <span>Jogadores</span>
+        </div>
+
+        <div>
+            <strong>30</strong>
+            <span>Equipas</span>
+        </div>
+
+        <div>
+            <strong>82</strong>
+            <span>Jogos</span>
+        </div>
+
+        <div>
+            <strong>1</strong>
+            <span>Paixão</span>
+        </div>
+
+    </section>
+
+
+    <!-- ================= NOTÍCIAS ================= -->
+
+    <section class="section" id="news">
+
+        <div class="section-header">
+
+            <div>
+
+                <p class="small-title">
+                    LATEST STORIES
+                </p>
+
+                <h2>
+                    Últimas notícias
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="news-grid">
+
+            <a href="news.html?story=luka-historico" class="news-card">
+
+                <span>
+                    NBA
+                </span>
+
+                <h3>
+                    Luka Dončić fecha a temporada
+                    com números históricos
+                </h3>
+
+                <p>
+                    A estrela dos Lakers continua entre
+                    os jogadores mais dominantes da liga.
+                </p>
+
+                <small>
+                    HOOPZONE • 2026
+                </small>
+
+            </a>
+
+
+            <a href="news.html?story=lebron-tempo" class="news-card">
+
+                <span>
+                    LEGENDS
+                </span>
+
+                <h3>
+                    LeBron continua a desafiar
+                    o tempo
+                </h3>
+
+                <p>
+                    O veterano continua a impressionar
+                    os fãs de basquete.
+                </p>
+
+                <small>
+                    HOOPZONE • 2026
+                </small>
+
+            </a>
+
+
+            <a href="news.html?story=curry-3pt" class="news-card">
+
+                <span>
+                    3-POINT
+                </span>
+
+                <h3>
+                    Stephen Curry continua
+                    a dominar nos três pontos
+                </h3>
+
+                <p>
+                    O jogador continua sendo uma das
+                    maiores referências da história.
+                </p>
+
+                <small>
+                    HOOPZONE • 2026
+                </small>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="logo">
+            <span>H</span> HOOPZONE
+        </div>
+
+        <p>
+            Basquete, estatísticas e histórias
+            num só lugar.
+        </p>
+
+        <small>
+            © 2026 HoopZone
+        </small>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

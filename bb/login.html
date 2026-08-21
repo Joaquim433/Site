@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Entrar | HoopZone</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <a href="index.html" class="logo">
+            <span>H</span> HOOPZONE
+        </a>
+
+        <nav class="navbar">
+            <a href="index.html">Início</a>
+            <a href="players.html">Jogadores</a>
+            <a href="index.html#teams">Equipas</a>
+            <a href="index.html#news">Notícias</a>
+        </nav>
+
+        <a href="login.html" class="login-button">
+            Entrar
+        </a>
+
+        <button class="menu-button" onclick="toggleMenu()">
+            ☰
+        </button>
+
+    </header>
+
+
+    <!-- ================= MENU MOBILE ================= -->
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="index.html">Início</a>
+        <a href="players.html">Jogadores</a>
+        <a href="index.html#teams">Equipas</a>
+        <a href="index.html#news">Notícias</a>
+        <a href="login.html">Entrar</a>
+
+    </div>
+
+
+    <!-- ================= LOGIN ================= -->
+
+    <section class="auth-section">
+
+        <div class="auth-card">
+
+            <p class="small-title">WELCOME BACK</p>
+            <h1>Entrar</h1>
+            <p>Acede à tua conta para acompanhares os teus jogadores favoritos.</p>
+
+            <form id="authForm">
+
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required placeholder="tuemail@exemplo.com">
+                </div>
+
+                <div class="form-field">
+                    <label for="password">Palavra-passe</label>
+                    <input type="password" id="password" required placeholder="••••••••">
+                </div>
+
+                <button type="submit" class="auth-submit">Entrar</button>
+
+                <p class="form-message" id="authMessage">Sessão iniciada com sucesso.</p>
+
+            </form>
+
+            <p class="auth-switch">
+                Ainda não tens conta? <a href="register.html">Criar conta</a>
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="logo">
+            <span>H</span> HOOPZONE
+        </div>
+
+        <p>
+            Basquete, estatísticas e histórias
+            num só lugar.
+        </p>
+
+        <small>
+            © 2026 HoopZone
+        </small>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONDICIONADO</title>
+    <style>
+        div{
+            background-color: aqua;
+            width: 250px;
+            
+
+        }
+        div p{
+            margin-top: 20px;
+            text-align: center;
+            padding-top: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>USANDO IF</h1>
+    <p>quantos dolares tem o Zeferino</p>
+    <input type="number" name="ef" id="ef">
+    <input type="button" value="verificar" id="bt" onclick="verificar()">
+    <div>
+        <p id="d1" >qual eh a sua situação financeira</p>
+    </div> 
+
+
+    <script>
+       function verificar(){
+         var n1=window.document.getElementById('ef')
+         
+        var n=Number(n1.value)
+        var a=Number(n1.value)
+        var b=Number(n1.value)
+        var c=Number(n1.value)
+        var d=window.document.getElementById('d1')
+        if(n>100){
+        d1.innerHTML=` O seu capital é de ${n} dolares , voce eh pobre.`
+        } 
+         if(n<100){
+        d1.innerHTML=` O seu capital é de ${n} dolares , voce eh muito pobre.`
+        } 
+        if(n>500){
+        d1.innerHTML=` O seu capital é de ${n} dolares , voce eh rico.`
+        } 
+        if(n>1000){
+        d1.innerHTML=` O seu capital é de ${n} dolares , voce eh muito  rico.`
+        } 
+         }  
+      
+
+
+       
+
+        
+       
+        
+    </script>
+    
+</body>
+</html>
