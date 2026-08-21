@@ -250,6 +250,46 @@
       width: 70px;
     }
 
+    .qty-selector {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .qty-btn {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 2px solid #ff9800;
+      background: white;
+      color: #ff9800;
+      font-weight: bold;
+      font-size: 1.1rem;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .qty-btn:hover {
+      background: #ff9800;
+      color: white;
+    }
+
+    .qty-value {
+      min-width: 24px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .order-summary {
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin: 20px 0;
+    }
+
     footer {
       background: #111;
       color: #bbb;
@@ -307,69 +347,114 @@
 
       <h5 class="mb-3">1. Escolhe os itens</h5>
 
-      <div class="order-item">
+      <div class="order-item" data-name="🍔 Hambúrguer Like" data-price="3500">
         <div>
           <strong>🍔 Hambúrguer Like</strong><br>
           <span class="price">3.500 Kz</span>
         </div>
-
+        <div class="qty-selector">
+          <button type="button" class="qty-btn qty-minus">−</button>
+          <span class="qty-value">0</span>
+          <button type="button" class="qty-btn qty-plus">+</button>
+        </div>
       </div>
 
-      <div class="order-item">
+      <div class="order-item" data-name="🍗 Frango Grelhado" data-price="4200">
         <div>
           <strong>🍗 Frango Grelhado</strong><br>
           <span class="price">4.200 Kz</span>
         </div>
-
+        <div class="qty-selector">
+          <button type="button" class="qty-btn qty-minus">−</button>
+          <span class="qty-value">0</span>
+          <button type="button" class="qty-btn qty-plus">+</button>
+        </div>
       </div>
 
-      <div class="order-item">
+      <div class="order-item" data-name="🐟 Peixe Assado" data-price="5000">
         <div>
           <strong>🐟 Peixe Assado</strong><br>
           <span class="price">5.000 Kz</span>
         </div>
-
+        <div class="qty-selector">
+          <button type="button" class="qty-btn qty-minus">−</button>
+          <span class="qty-value">0</span>
+          <button type="button" class="qty-btn qty-plus">+</button>
+        </div>
       </div>
 
-      <div class="order-item">
+      <div class="order-item" data-name="🥩 Bife à Casa" data-price="4800">
         <div>
           <strong>🥩 Bife à Casa</strong><br>
           <span class="price">4.800 Kz</span>
         </div>
-
+        <div class="qty-selector">
+          <button type="button" class="qty-btn qty-minus">−</button>
+          <span class="qty-value">0</span>
+          <button type="button" class="qty-btn qty-plus">+</button>
+        </div>
       </div>
 
-      <div class="order-item">
+      <div class="order-item" data-name="🍲 Muamba de Galinha" data-price="4500">
         <div>
           <strong>🍲 Muamba de Galinha</strong><br>
           <span class="price">4.500 Kz</span>
         </div>
-      
+        <div class="qty-selector">
+          <button type="button" class="qty-btn qty-minus">−</button>
+          <span class="qty-value">0</span>
+          <button type="button" class="qty-btn qty-plus">+</button>
+        </div>
       </div>
 
-      <div class="order-item">
+      <div class="order-item" data-name="🍱 Marmita do Dia (Takeaway)" data-price="3200">
         <div>
           <strong>🍱 Marmita do Dia (Takeaway)</strong><br>
           <span class="price">3.200 Kz</span>
         </div>
-       
+        <div class="qty-selector">
+          <button type="button" class="qty-btn qty-minus">−</button>
+          <span class="qty-value">0</span>
+          <button type="button" class="qty-btn qty-plus">+</button>
+        </div>
       </div>
 
-      <div class="order-item">
+      <div class="order-item" data-name="🥤 Sumo Natural" data-price="1200">
         <div>
           <strong>🥤 Sumo Natural</strong><br>
           <span class="price">1.200 Kz</span>
         </div>
+        <div class="qty-selector">
+          <button type="button" class="qty-btn qty-minus">−</button>
+          <span class="qty-value">0</span>
+          <button type="button" class="qty-btn qty-plus">+</button>
+        </div>
       </div>
 
-      <div class="order-item">
+      <div class="order-item" data-name="🥫 Refrigerante" data-price="600">
         <div>
           <strong>🥫 Refrigerante</strong><br>
           <span class="price">600 Kz</span>
         </div>
+        <div class="qty-selector">
+          <button type="button" class="qty-btn qty-minus">−</button>
+          <span class="qty-value">0</span>
+          <button type="button" class="qty-btn qty-plus">+</button>
+        </div>
       </div>
 
       <hr>
+
+      <div class="order-summary">
+        <span>Total</span>
+        <span id="orderTotal">0 Kz</span>
+      </div>
+
+      <h5 class="mb-3">2. Envia o pedido pelo WhatsApp</h5>
+      <div class="d-grid gap-2">
+        <a href="#" id="whatsBtn1" target="_blank" class="btn btn-like">📲 Enviar para 933 722 509</a>
+        <a href="#" id="whatsBtn2" target="_blank" class="btn btn-like-outline">📲 Enviar para 955 386 006</a>
+      </div>
  </div>
 </section>
 
@@ -387,5 +472,72 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const WHATS_NUM_1 = "244933722509";
+  const WHATS_NUM_2 = "244955386006";
+
+  const items = document.querySelectorAll(".order-item");
+  const totalEl = document.getElementById("orderTotal");
+  const btn1 = document.getElementById("whatsBtn1");
+  const btn2 = document.getElementById("whatsBtn2");
+
+  function formatKz(v) {
+    return v.toLocaleString("pt-PT") + " Kz";
+  }
+
+  function updateOrder() {
+    let total = 0;
+    let lines = [];
+
+    items.forEach(item => {
+      const qtyEl = item.querySelector(".qty-value");
+      const qty = parseInt(qtyEl.textContent, 10);
+      const price = parseInt(item.dataset.price, 10);
+      const name = item.dataset.name;
+
+      if (qty > 0) {
+        total += qty * price;
+        lines.push(`• ${qty}x ${name} — ${formatKz(qty * price)}`);
+      }
+    });
+
+    totalEl.textContent = formatKz(total);
+
+    let message;
+    if (lines.length === 0) {
+      message = "Olá! Gostaria de fazer uma encomenda no Restaurante Like.";
+    } else {
+      message = "Olá! Gostaria de fazer a seguinte encomenda:\n\n" +
+        lines.join("\n") +
+        `\n\nTotal: ${formatKz(total)}`;
+    }
+
+    const encoded = encodeURIComponent(message);
+    btn1.href = `https://wa.me/${WHATS_NUM_1}?text=${encoded}`;
+    btn2.href = `https://wa.me/${WHATS_NUM_2}?text=${encoded}`;
+  }
+
+  items.forEach(item => {
+    const qtyEl = item.querySelector(".qty-value");
+    const minusBtn = item.querySelector(".qty-minus");
+    const plusBtn = item.querySelector(".qty-plus");
+
+    minusBtn.addEventListener("click", () => {
+      let qty = parseInt(qtyEl.textContent, 10);
+      if (qty > 0) qty--;
+      qtyEl.textContent = qty;
+      updateOrder();
+    });
+
+    plusBtn.addEventListener("click", () => {
+      let qty = parseInt(qtyEl.textContent, 10);
+      qty++;
+      qtyEl.textContent = qty;
+      updateOrder();
+    });
+  });
+
+  updateOrder();
+</script>
 </body>
 </html>
